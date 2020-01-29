@@ -24,6 +24,11 @@
 
 
     <style>
+        *{
+            align-items:center;
+            vertical-align:middle;
+            text-align:center;
+        }
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -32,28 +37,56 @@
             -ms-user-select: none;
             user-select: none;
         }
+        .dpimg{
+            margin:25px;
+        }
+        body {
+            margin:50px;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            display: flex;
+            flex-direction:column;
+            justify-content:center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        .form-signin{
+            position: relative;
+            box-sizing: border-box;
+            height: auto;
+            padding: 10px;
+            font-size: 16px;
+            margin:50px;
+        }
 
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
             }
         }
+        .form-signin .form-control:focus{
+            z-index: 2;
+            border-color: black;
+            box-shadow: 0 0 0 0.2rem rgba(102, 255, 102, 0.45);
+        }
+
     </style>
     <!-- Custom styles for this template -->
     <link href="signin.css" rel="stylesheet">
 </head>
 <body class="text-center">
-<form class="form-signin">
-    <img class="mb-4" src="/docs/4.4/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+<form class="form-signin" style="background-color: #3333cc">
+    <img class="dpimg" src="hamster.jpg" alt="" width="100px" height="75px">
+    <h1 class="h3 mb-3 font-weight-normal" style="color: #ffffff">Please sign in</h1>
     <label for="inputEmail" class="sr-only">Email address</label>
     <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
     <label for="inputPassword" class="sr-only">Password</label>
     <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
     <div class="checkbox mb-3">
-        <label>
-            <input type="checkbox" value="remember-me"> Remember me
-        </label>
+            <input type="checkbox" value="remember-me" >
+            <label style="color: #ffffff"> Remember me </label>
     </div>
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
     <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
